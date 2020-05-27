@@ -97,11 +97,6 @@ theme: icarus #landscape icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: https://e.coding.net/handsonic/blogblog/blogblog.git
-  branch: master
-
   ## live2d
 live2d:
    enable: true
