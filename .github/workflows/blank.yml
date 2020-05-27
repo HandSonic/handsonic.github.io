@@ -1,4 +1,4 @@
-name: GitHub Actions Build and Deploy Demo
+name: Hexo Blog CI
 on:
   push:
     branches:
