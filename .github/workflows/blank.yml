@@ -24,8 +24,13 @@ jobs:
     - name: '构建'
       run: |
           echo '[构建]正在构建Hexo环境并渲染网站静态文件...'
+          mkdir "${HOME}/.npm-packages"
+          echo NPM_PACKAGES="${HOME}/.npm-packages" >> ${HOME}/.bashrc
+          echo prefix=${HOME}/.npm-packages >> ${HOME}/.npmrc
+          echo NODE_PATH=\"\$NPM_PACKAGES/lib/node_modules:\$NODE_PATH\" >> ${HOME}/.bashrc
+          echo PATH=\"\$NPM_PACKAGES/bin:\$PATH\" >> ${HOME}/.bashrc
            npm --version
-           npm install  hexo-cli
+           npm install  -g hexo-cli
           hexo g
           echo '[构建]构建完成.'
       
