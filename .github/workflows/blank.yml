@@ -23,10 +23,10 @@ jobs:
     # Runs a single command using the runners shell
     - name: '构建'
       run: |
-          echo '[构建]正在构建Hexo环境并渲染网站静态文件...',
-           sh ''' npm --version
-                  npm install -g hexo-cli
-                  hexo g ''',
+          echo '[构建]正在构建Hexo环境并渲染网站静态文件...'
+           npm --version
+           npm install -g hexo-cli
+          hexo g
           echo '[构建]构建完成.'
       
 
